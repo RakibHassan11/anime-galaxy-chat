@@ -1,4 +1,4 @@
-import { MessageCircle, Plus, Sparkles, Stars } from "lucide-react";
+import { MessageCircle, Plus, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface AnimeCardProps {
@@ -39,22 +39,19 @@ const AnimeCard = ({ title, image, onAIChat, onAddToList }: AnimeCardProps) => {
             onClick={onAddToList}
             size="sm"
             variant="secondary"
-            className="flex-1 bg-secondary/80 hover:bg-secondary text-secondary-foreground text-xs"
+            className="bg-secondary/80 hover:bg-secondary text-secondary-foreground text-xs px-2 py-1 h-7"
           >
             <Plus className="w-3 h-3 mr-1" />
-            Add to list
+            Add
           </Button>
           
           <Button
             onClick={onAIChat}
             size="sm"
-            className="bg-gradient-accent hover:opacity-90 text-foreground shadow-glow hover:shadow-glow animate-glow-pulse px-2"
+            className="bg-gradient-accent hover:opacity-90 text-foreground shadow-glow hover:shadow-glow animate-glow-pulse px-3 py-2 h-8 flex-1"
             title="Chat with AI"
           >
-            <div className="relative flex items-center">
-              <Stars className="w-3 h-3" />
-              <MessageCircle className="w-3 h-3 -ml-1" />
-            </div>
+            <MessageCircle className="w-4 h-4" />
           </Button>
         </div>
       </div>

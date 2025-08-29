@@ -1,4 +1,4 @@
-import { MessageSquare, Sparkles } from "lucide-react";
+import { MessageCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface FloatingChatButtonProps {
@@ -12,7 +12,7 @@ const FloatingChatButton = ({ onClick }: FloatingChatButtonProps) => {
         onClick={onClick}
         className="relative bg-gradient-accent hover:opacity-90 text-foreground shadow-cosmic hover:shadow-glow w-14 h-14 rounded-full animate-float group"
       >
-        <MessageSquare className="w-6 h-6" />
+        <MessageCircle className="w-6 h-6" />
         
         {/* Sparkle Effect */}
         <div className="absolute -top-1 -right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
