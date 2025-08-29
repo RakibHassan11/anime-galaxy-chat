@@ -48,10 +48,15 @@ const AnimeCard = ({ title, image, onAIChat, onAddToList }: AnimeCardProps) => {
           <Button
             onClick={onAIChat}
             size="sm"
-            className="bg-gradient-accent hover:opacity-90 text-foreground shadow-glow hover:shadow-glow animate-glow-pulse px-3 py-2 h-8 flex-1"
+            className="bg-gradient-accent hover:opacity-90 text-foreground shadow-glow hover:shadow-glow animate-glow-pulse px-3 py-2 h-8 flex-1 relative overflow-hidden group"
             title="Chat with AI"
           >
-            <MessageCircle className="w-4 h-4" />
+            <div className="flex items-center gap-1.5 relative z-10">
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span className="text-xs font-medium">Chat with AI</span>
+            </div>
+            {/* Animated background overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
           </Button>
         </div>
       </div>
